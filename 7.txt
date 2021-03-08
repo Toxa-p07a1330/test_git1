@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() 
+{
+   unsigned int a;
+   scanf("%ui", a);
+   int n;
+   scanf("%i", n);
+   int upper = a/pow(2,n);
+   int lower = 2%pow(2,n);
+   a<<n;
+   a+=upper>>n;
+   
+}

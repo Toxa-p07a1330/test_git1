@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <math.h>
+float calcSi(float x, int pow_){
+    float ch=1;
+    float zn=1;
+    for(int i =1; i<pow_; i+=2){
+        ch*=i;
+        zn*=(i+1);
+    }
+    return x*ch/zn;
+}
+float exactF(float x){
+    return 1/(sqrt(1-x*x));
+}
+int main() 
+{
+    float e = 0.1;
+    float x = 5;
+    int currPow = 2;
+    float f = 1+calcSi(x, currPow);
+    while(abs(f-exactF(x))>e){
+        currPow+=2;
+        f+=calcSi(x, currPow);
+    }
+   
+}
+
+//уточнить про точность

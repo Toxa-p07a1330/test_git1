@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() 
+{
+  float count = 0;
+  float sum = 0;
+  float x = 0;
+  while(x>=0.0){
+      scanf("%f", &x);
+      count++;
+      sum+=sqrt(count+x);
+  }
+  sum/=count;
+  printf("%f", sum);
+   
+}
